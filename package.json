@@ -1,0 +1,33 @@
+{
+  "name": "win-dhcp-api",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^10.0.0",
+    "express": "~4.16.1",
+    "follow-redirects": "^1.14.4",
+    "hbs": "^4.1.2",
+    "http-errors": "~1.6.3",
+    "morgan": "~1.9.1",
+    "node-windows": "^1.0.0-beta.6",
+    "swagger-ui-express": "^4.1.6"
+  },
+  "description": "Web API service for DHCP servers",
+  "main": "./bin/www",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lspiehler/win-dhcp-api.git"
+  },
+  "author": "Lyas Spiehler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lspiehler/win-dhcp-api/issues"
+  },
+  "homepage": "https://github.com/lspiehler/win-dhcp-api#readme"
+}
