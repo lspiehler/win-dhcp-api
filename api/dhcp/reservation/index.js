@@ -1,5 +1,9 @@
-const scopelist = require('./list');
+const reservationlist = require('./list');
+const reservationdelete = require('./delete');
+const reservationcreate = require('./create');
 
 module.exports = {
-    list: scopelist
+    list: reservationlist,
+    delete: reservationdelete,
+    create: reservationcreate
 }
