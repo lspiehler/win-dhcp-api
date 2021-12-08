@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
 const dhcp = require('../api/dhcp');
+const service = require('../api/service');
+
+router.post('/service/cert/new', function(req, res, next) {
+    res.set('Cache-Control', 'public, max-age=0, no-cache');
+    service.replacecert(req.body, function(err, resp) {
+        if(resp.headers) {
+            for(let i = 0; i <= resp.headers.length - 1; i++) {
+                res.set(resp.headers[i][0], resp.headers[i][1]);
+            }
+        }
+        res.status(resp.status).json(resp.body);
+    });
+});
 
 /* GET users listing. */
 router.get('/dhcp/:object/:action', function(req, res, next) {
